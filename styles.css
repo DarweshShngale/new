@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.language-selector {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lang-btn {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.lang-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.input-area {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    resize: none;
+}
+
+.keyboard-container {
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.keyboard {
+    display: grid;
+    gap: 8px;
+    padding: 10px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.key {
+    min-width: 45px;
+    height: 45px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 5px;
+    flex: 1;
+    max-width: 60px;
+}
+
+.key:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.key:active {
+    background-color: #e0e0e0;
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.key.special {
+    background-color: #e0e0e0;
+    min-width: 90px;
+    max-width: 120px;
+}
+
+.key.space {
+    min-width: 200px;
+    max-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .keyboard {
+        gap: 4px;
+        padding: 5px;
+    }
+
+    .key {
+        min-width: 32px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .key.special {
+        min-width: 60px;
+    }
+
+    .lang-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    textarea {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .key {
+        min-width: 28px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .key.special {
+        min-width: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .keyboard {
+        gap: 10px;
+    }
+
+    .key {
+        min-width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .key.special {
+        min-width: 100px;
+    }
+}

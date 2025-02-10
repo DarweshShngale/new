@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Virtual Keyboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <button data-lang="en" class="lang-btn active">English</button>
+            <button data-lang="ar" class="lang-btn">Arabic</button>
+            <button data-lang="yi" class="lang-btn">Yazidi</button>
+        </div>
+        
+        <div class="input-area">
+            <textarea id="textInput" rows="4" placeholder="Start typing..."></textarea>
+        </div>
+
+        <div class="keyboard-container">
+            <div id="keyboard" class="keyboard"></div>
+        </div>
+    </div>
+    <script src="keyboard-layouts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
